@@ -15,17 +15,18 @@ public class Target
     private int ycord;
     private Color col1;
     private int num;
+    private int size;
 
     /**
      * Default constructor for objects of class Target
      */
-    public Target(int x, int y, Color col, int number)
+    public Target(int x, int y, Color col, int number,int diameter)
     {
-        this.xcord = x;
-        this.ycord = y;
+        this.xcord = x+100;
+        this.ycord = y+100;
         this.col1 = col;
         this.num = number;
-        
+        this.size = diameter;
     }
 
     /**
@@ -41,21 +42,19 @@ public class Target
      */
     public void draw(Graphics2D g2)
     {
-        xcord = xcord + 100;
-        ycord = ycord + 100;
-        int value = 100;
-        Ellipse2D.Double circle1= new Ellipse2D.Double(xcord, ycord, 100,100);
+        int value = this.size;
+        int radius = this.size/(2*num);
+        Ellipse2D.Double circle1= new Ellipse2D.Double(xcord, ycord, value,value);
         g2.setColor(this.col1);
         g2.fill(circle1);
-        this.num = this.num -1;
         int count = 2;
         int remainder = 0;
         
-        while( count <= num + 1 )
+        while( count <= num)
         {
-           xcord = xcord + 10;
-           ycord = ycord + 10;
-           value= value-20;
+           xcord = xcord + radius;
+           ycord = ycord + radius;
+           value= value-radius - radius;
            remainder = count % 2;
            circle1= new Ellipse2D.Double(xcord, ycord, value,value);
            if (remainder == 0 )

@@ -26,16 +26,17 @@ public class TargetComponent extends JComponent//more specialized verison of JCo
     {
         Graphics2D g2 = (Graphics2D) g;
         //cast operator (changes type of object from grahics to graphics 2D)
-        Target tar1= new Target(100,100,Color.BLACK,3);
+        Target tar1= new Target(100,100,Color.BLACK,4,100);
         tar1.draw(g2);
-        Target tar2= new Target(200,200,Color.RED,4);
+        Target tar2= new Target(200,200,Color.RED,5,125);
         tar2.draw(g2);
-        Target tar3= new Target(300,300,Color.BLUE,5);
+        Target tar3= new Target(300,300,Color.BLUE,6,150);
         tar3.draw(g2);
-        tar3= new Target(0,200,Color.GRAY,2);
+        tar3= new Target(0,200,Color.GRAY,3,75);
         tar3.draw(g2);
-        tar3= new Target(-100,300, Color.ORANGE,1);
+        tar3= new Target(-100,300, Color.ORANGE,2,50);
         tar3.draw(g2);
+        
         
         
     }

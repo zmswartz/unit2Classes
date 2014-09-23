@@ -19,11 +19,12 @@ public class Target
     /**
      * Default constructor for objects of class Target
      */
-    public Target(int x, int y, Color col)
+    public Target(int x, int y, Color col, int number)
     {
         this.xcord = x;
         this.ycord = y;
         this.col1 = col;
+        this.num = number;
         
     }
 
@@ -47,23 +48,24 @@ public class Target
         g2.setColor(this.col1);
         g2.fill(circle1);
         this.num = this.num -1;
-        int count = 1;
-        this.num = this.num /2;
+        int count = 2;
+        int remainder = 0;
         
-        while( count < 3 )
+        while( count <= num + 1 )
         {
            xcord = xcord + 10;
            ycord = ycord + 10;
            value= value-20;
+           remainder = count % 2;
            circle1= new Ellipse2D.Double(xcord, ycord, value,value);
-           g2.setColor(Color.WHITE);
+           if (remainder == 0 )
+           {
+               g2.setColor(Color.WHITE);
+           }else { 
+               g2.setColor(col1);
+            }
            g2.fill(circle1);
-           xcord = xcord + 10;
-           ycord = ycord + 10;
-           value= value-20;
-           circle1= new Ellipse2D.Double(xcord, ycord, value,value);
-           g2.setColor(this.col1);
-           g2.fill(circle1);
+           
            count = count + 1;
         }
         

@@ -28,8 +28,12 @@ public class CityscapeComponent extends JComponent
         
         // create instances of classes and invoke the draw method on each
         // ...
-        
-        
+        Background back = new Background();
+        back.draw(g2);
+        Building b1 = new Building(10,200,100,150);
+        b1.draw(g2);
+        Tree t1 = new Tree(150, 300 , 20, 50);
+        t1.draw(g2);
     }
 
 }

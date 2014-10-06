@@ -7,21 +7,16 @@ import java.awt.Color;
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
  * 
- * @author @gcschmit
- * @version 18 July 2014
+ * @author zmswartz
+ * @version 6 October 2014
  */
 public class CityscapeComponent extends JComponent
 {
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * the painComponent method creates the instances of the classes and 
+     * invokes the draw method to draw each object
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @param    g  instance of the class Graphics
      */
     public void paintComponent(Graphics g)
     {
@@ -48,6 +43,8 @@ public class CityscapeComponent extends JComponent
         b1.draw(g2);
         t1 = new Tree(700, 250 , 10, 100);
         t1.draw(g2);
+        Sun s1 = new Sun(-50,-50, 100);
+        s1.draw(g2);
     }
 
 }

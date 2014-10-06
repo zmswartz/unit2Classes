@@ -11,7 +11,13 @@ import java.awt.Color;
  */
 public class Building
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** xcord   the x cordinate of the top left corner of the building
+     * ycord    the y cordinate of the top left corner of the building
+     * height   the height of the building
+     * width
+     * col1
+     * col2
+     */
     private int xcord;
     private int ycord;
     private int height;

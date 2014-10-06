@@ -16,6 +16,8 @@ public class Building
     private int ycord;
     private int height;
     private int width;
+    private Color col1;
+    private Color col2;
 
     /**
      * Default constructor for objects of class Building
@@ -24,13 +26,15 @@ public class Building
      *          hei the height of the building
      *          wid the width of the building
      */
-    public Building(int x, int y, int wid, int hei)
+    public Building(int x, int y, int wid, int hei, Color color1, Color color2)
     {
         // initialise instance variables
         this.xcord = x;
         this.ycord = y;
         this.height = hei;
         this.width = wid;
+        this.col1 = color1;
+        this.col2 = color2;
     }
 
     /**
@@ -51,7 +55,7 @@ public class Building
         Rectangle2D.Double rect1 = new Rectangle2D.Double(this.xcord,this.ycord,
                                         this.width,this.height);
         g2.draw(rect1);
-        g2.setColor(Color.GRAY);
+        g2.setColor(col1);
         g2.fill(rect1);
         g2.setColor(Color.BLACK);
         int num_horiz = this.width / 25;
@@ -65,11 +69,15 @@ public class Building
                 rect1 = new Rectangle2D.Double(this.xcord+(25*count1)+5,this.ycord+5,
                                             15,15);
                 g2.draw(rect1);
+                g2.setColor(col2);
+                g2.fill(rect1);
                 count1 += 1;
+                g2.setColor(Color.BLACK);
             }
             count2 += 1;
             count1 = 0;
             this.ycord += 25;
+            
         }
     }
 

@@ -5,18 +5,24 @@ import java.awt.Color;
 /**
  * Write a description of class Tree here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author zmswartz 
+ * @version 10/7/14
  */
 public class Tree
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** the x cordinate of the top left hand corner of the tree trunk */
     private int xcordrect;
+    /** the y cordinate of the top left hand corner of the tree trunk */
     private int ycordrect;
+    /** the width of the tree trunk */
     private int widthrect;
+    /** the height of the tree trunk */
     private int heightrect;
+    /** the x cordinate of the top left hand corner of the leaves */
     private int xcordcir;
+    /** the y cordinate of the top left hand corner of the leaves */
     private int ycordcir;
+    /** the radius of the leaves */
     private int radcir;
     /**
      * Default constructor for objects of class Tree
@@ -34,15 +40,9 @@ public class Tree
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * The draw method draws and fills the tree trunk and the leaves
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @param    g2    a Graphics2D object
      */
     public void draw(Graphics2D g2)
     {

@@ -4,16 +4,18 @@ import java.awt.geom.Rectangle2D;
 import java.awt.Color;
 
 /**
- * Write a description of class Sun here.
+ * A class that creates a circle that looks like a sun
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author zmswartz 
+ * @version 10/7/14
  */
 public class Sun
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** the x cordinate of the top left hand corner of the circle */
     private int xcord;
+    /** the y cordinate of the top left hand corner of the circle */
     private int ycord;
+    /** the radius of the circle */
     private int rad;
     /**
      * Default constructor for objects of class Sun
@@ -27,15 +29,9 @@ public class Sun
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * The draw method draws and fills the circle which represents the sun.
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @param    g2    a Graphics2D object
      */
     public void draw(Graphics2D g2)
     {

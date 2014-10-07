@@ -1,17 +1,16 @@
- import java.awt.Graphics2D;
+import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.Color;
 
 /**
- * Write a description of class Background here.
+ * A class that creates a background for the city
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (zmswartz) 
+ * @version (10/7/14)
  */
 public class Background
 {
-    /** description of instance variable x (add comment for each instance variable) */
     
 
     /**
@@ -19,20 +18,15 @@ public class Background
      */
     public Background()
     {
-        // initialise instance variables
+        // no instance variables
         
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * The draw method draws and fills the background of the city. It creats the
+     * sky and grass
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @param    g2     a Graphics2D object
      */
     public void draw(Graphics2D g2)
     {

@@ -21,6 +21,10 @@ public class Road
     private int width;
     /**
      * Default constructor for objects of class Road
+     * @param  x   x cordinate of top left corner of road
+     * @param  y   y cordinate of top left corner of road
+     * @param  hei height of road
+     * @param  wid width of the road
      */
     public Road(int x, int y, int wid, int hei)
     {

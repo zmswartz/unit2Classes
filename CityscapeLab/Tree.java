@@ -26,6 +26,10 @@ public class Tree
     private int radcir;
     /**
      * Default constructor for objects of class Tree
+     *  @param x   the x cordinate of the top left hand corner of the tree trunk
+     *  @param y   the y cordinate of the top left hand corner of the tree trunk
+     *  @param wid the width of the tree trunk
+     *  @param hei the height of the tree trunk
      */
     public Tree(int x, int y , int wid, int hei)
     {

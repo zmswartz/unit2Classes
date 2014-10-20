@@ -19,6 +19,9 @@ public class Sun
     private int rad;
     /**
      * Default constructor for objects of class Sun
+     * @param x   the x cordinate of the top left hand corner of the circle
+     * @param y   the y cordinate of the top left hand corner of the circle
+     * @param rad the radius of the circle
      */
     public Sun(int x, int y, int radius)
     {
